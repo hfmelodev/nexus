@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "target": "ESNext", // Usa a versão mais recente do ECMAScript para o output
+    "module": "ESNext", // Usa o sistema de módulos ESNext
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ], // Inclui recursos modernos e APIs de navegador
+    "allowJs": true, // Permite incluir arquivos JavaScript no projeto
+    "skipLibCheck": true, // Ignora a verificação de tipos em arquivos de definição
+    "strict": true, // Habilita todas as verificações estritas
+    "esModuleInterop": true, // Garante a interoperabilidade com módulos CommonJS
+    "moduleResolution": "Node", // Resolve módulos como o Node.js
+    "resolveJsonModule": true, // Permite importar arquivos JSON
+    "isolatedModules": true, // Garante que cada arquivo é tratado como um módulo isolado
+    "noEmit": true, // Não emite arquivos de saída
+    "jsx": "react-jsx", // Suporte ao JSX com a nova transformação do React
+    "baseUrl": ".", // Define a base para os caminhos relativos
+    "paths": {
+      "@/*": [
+        "src/*"
+      ] // Atalho para facilitar importações
+    },
+    "incremental": true, // Habilita compilação incremental para melhorias de desempenho
+    "forceConsistentCasingInFileNames": true, // Garante que o case dos nomes dos arquivos seja consistente
+    "noImplicitReturns": true, // Exige retorno explícito em todas as funções
+    "noFallthroughCasesInSwitch": true // Evita comportamento inesperado em switch
+  },
+  "include": [
+    "src"
+  ], // Inclui os arquivos da pasta `src` no projeto
+  "exclude": [
+    "node_modules",
+    "dist"
+  ] // Exclui as pastas que não devem ser processadas
+}

@@ -22,6 +22,9 @@
         "src/*"
       ] // Atalho para facilitar importações
     },
+    "types": [
+      "vitest/globals",
+    ],
     "incremental": true, // Habilita compilação incremental para melhorias de desempenho
     "forceConsistentCasingInFileNames": true, // Garante que o case dos nomes dos arquivos seja consistente
     "noImplicitReturns": true, // Exige retorno explícito em todas as funções

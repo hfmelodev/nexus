@@ -1,10 +1,7 @@
-export class Instructor {
-  public id: string
-  public name: string
+import { Entity } from '@/core/entities/entity'
 
-  constructor(name: string, id?: string) {
-    // Se tiver id, ele recebe o id, se não tiver, ele cria um id aleatório
-    this.id = id ?? crypto.randomUUID()
-    this.name = name
-  }
+interface InstructorProps {
+  name: string
 }
+
+export class Instructor extends Entity<InstructorProps> {}

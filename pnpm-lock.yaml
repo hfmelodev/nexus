@@ -33,6 +33,9 @@ importers:
       typescript:
         specifier: ^5.7.3
         version: 5.7.3
+      vite-plugin-tsconfig-paths:
+        specifier: ^1.4.1
+        version: 1.4.1(typescript@5.7.3)(vite@6.0.7(@types/node@22.10.5)(tsx@4.19.2))
       vitest:
         specifier: ^3.0.2
         version: 3.0.2(@types/node@22.10.5)(tsx@4.19.2)
@@ -1085,6 +1088,11 @@ packages:
     engines: {node: '>=18.0.0'}
     hasBin: true
 
+  typescript-paths@1.5.1:
+    resolution: {integrity: sha512-lYErSLCON2MSplVV5V/LBgD4UNjMgY3guATdFCZY2q1Nr6OZEu4q6zX/rYMsG1TaWqqQSszg6C9EU7AGWMDrIw==}
+    peerDependencies:
+      typescript: ^4.7.2 || ^5
+
   typescript@5.7.3:
     resolution: {integrity: sha512-84MVSjMEHP+FQRPy3pX9sTVV/INIex71s9TL2Gm5FG/WG1SqXeKyZ0k7/blY/4FdOzI12CBy1vGc4og/eus0fw==}
     engines: {node: '>=14.17'}
@@ -1097,6 +1105,11 @@ packages:
     resolution: {integrity: sha512-hsEQerBAHvVAbv40m3TFQe/lTEbOp7yDpyqMJqr2Tnd+W58+DEYOt+fluQgekOePcsNBmR77lpVAnIU2Xu4SvQ==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
+
+  vite-plugin-tsconfig-paths@1.4.1:
+    resolution: {integrity: sha512-pGpvsPGDpiM5z7I9ZhBe7H2WAH0gAC2Lh55rM3pE+84V2q7qojNO28wdUl4i/M4XUfJcilhyucmbc9D7IKqpXA==}
+    peerDependencies:
+      vite: '*'
 
   vite@6.0.7:
     resolution: {integrity: sha512-RDt8r/7qx9940f8FcOIAH9PTViRrghKaK2K1jY3RaAURrEUbm9Du1mJ72G+jlhtG3WwodnfzY8ORQZbBavZEAQ==}
@@ -2062,6 +2075,10 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
+  typescript-paths@1.5.1(typescript@5.7.3):
+    dependencies:
+      typescript: 5.7.3
+
   typescript@5.7.3: {}
 
   undici-types@6.20.0: {}
@@ -2086,6 +2103,13 @@ snapshots:
       - terser
       - tsx
       - yaml
+
+  vite-plugin-tsconfig-paths@1.4.1(typescript@5.7.3)(vite@6.0.7(@types/node@22.10.5)(tsx@4.19.2)):
+    dependencies:
+      typescript-paths: 1.5.1(typescript@5.7.3)
+      vite: 6.0.7(@types/node@22.10.5)(tsx@4.19.2)
+    transitivePeerDependencies:
+      - typescript
 
   vite@6.0.7(@types/node@22.10.5)(tsx@4.19.2):
     dependencies:

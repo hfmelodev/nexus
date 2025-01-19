@@ -1,5 +1,7 @@
+import { UniqueEntityId } from './value-objects/unique-entity-id'
+
 export class Entity<Props> {
-  private _id: string
+  private _id: UniqueEntityId
   protected props: Props
 
   get id() {
@@ -7,7 +9,7 @@ export class Entity<Props> {
   }
 
   constructor(props: Props, id?: string) {
-    this._id = id ?? crypto.randomUUID()
+    this._id = new UniqueEntityId(id)
     this.props = props
   }
 }
